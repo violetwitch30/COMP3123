@@ -4,7 +4,7 @@ const SERVER_PORT = 8089;
 var app = express()
 
 // static middleware
-app.use("/test", express.static("./public"))
+app.use(express.static("./public"))
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
