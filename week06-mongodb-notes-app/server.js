@@ -1,5 +1,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const noteRoutes = require('./routes/NoteRoutes.js'); // adjust path if needed
 
 // TODO - Update your mongoDB Atlas Url here to Connect to the database
 const DB_URL = process.env.DB_URL || "mongodb+srv://fidan_db_user:password3009@cluster0.fcm84u0.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
@@ -9,6 +10,7 @@ const app = express();
 
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
+app.use('/api', noteRoutes);
 
 app.get('/', (req, res) => {
     res.send("<h1>Welcome to Note-taking application - Week06 Exercise</h1>");

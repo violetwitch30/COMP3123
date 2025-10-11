@@ -51,7 +51,7 @@ noteRoutes.get('/notes', async (req, res) => {
     // Validate request
     if(!req.body.content) {
         return res.status(400).send({
-            message: "Note content can not be empty"
+            message: "Note content cannot be empty"
         });
     } */
     //TODO - Write your code here to returns all note
@@ -83,7 +83,7 @@ noteRoutes.get('/notes/:noteId', async (req, res) => {
     // // Validate request
     // if(!req.body.content) {
     //     return res.status(400).send({
-    //         message: "Note content can not be empty"
+    //         message: "Note content cannot be empty"
     //     });
     // }
     //TODO - Write your code here to return only one note using noteId
@@ -94,7 +94,7 @@ noteRoutes.get('/notes/:noteId', async (req, res) => {
 // PUT: http://localhost:8081/api/notes/:noteId
 noteRoutes.put('/notes/:noteId', async (req, res) => {
     // Validate request
-    if(!req.body.noteTitle && !req.body.priority && !req.body.noteDescription) {
+    if(!req.body.noteTitle && !req.body.noteDescription && !req.body.priority) {
         return res.status(400).send({
             message: "Please, provide at least one field to update"
         });
@@ -158,7 +158,7 @@ noteRoutes.delete('/notes/:noteId', async (req, res) => {
     }
     // if(!req.body.content) {
     //     return res.status(400).send({
-    //         message: "Note content can not be empty"
+    //         message: "Note content cannot be empty"
     //     });
     // }
     //TODO - Write your code here to delete the note using noteid
