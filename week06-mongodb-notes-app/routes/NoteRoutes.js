@@ -161,7 +161,7 @@ noteRoutes.delete('/notes/:noteId', async (req, res) => {
     //         message: "Note content cannot be empty"
     //     });
     // }
-    //TODO - Write your code here to delete the note using noteid
+    //TODO - Write your code here to delete the note using noteId
 });
 
 module.exports = noteRoutes;
